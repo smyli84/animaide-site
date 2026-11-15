@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Confidentialité AnimAide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Mise en page : document juridique sobre, une colonne de lecture, sommaire en tête, tableau des données */
+:root {
+  --fond: #F6F8F6;
+  --papier: #FFFFFF;
+  --texte: #1B1F1C;
+  --gris: #5D6660;
+  --trait: #DDE4DF;
+  --vert: #1E6B3A;
+  --vert-clair: #E5F2E8;
+  --a-remplir: #FFF1C9;
+  --a-remplir-texte: #7A5600;
+  --titre: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --corps: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --fond: #121614; --papier: #1A201C; --texte: #E6ECE8; --gris: #A3AFA7; --trait: #2C3530;
+  --vert: #6FCB8E; --vert-clair: #203328; --a-remplir: #3D3315; --a-remplir-texte: #F2D27A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --fond: #121614; --papier: #1A201C; --texte: #E6ECE8; --gris: #A3AFA7; --trait: #2C3530;
+  --vert: #6FCB8E; --vert-clair: #203328; --a-remplir: #3D3315; --a-remplir-texte: #F2D27A; color-scheme: dark }
+body { background: var(--fond); color: var(--texte); font: 400 16px/1.65 var(--corps); }
+.page { max-width: 760px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+header { display: grid; gap: 10px; }
+.marque { display: flex; align-items: center; gap: 10px; color: var(--vert); font: 700 20px var(--titre); }
+.marque svg { width: 34px; height: 34px; flex: none; }
+h1 { font: 700 clamp(28px, 6vw, 40px)/1.15 var(--titre); margin: 0; text-wrap: balance; }
+.meta { color: var(--gris); font-size: 14px; }
+.resume { background: var(--vert-clair); border-radius: 14px; padding: 18px 20px; display: grid; gap: 6px; }
+.resume strong { font-family: var(--titre); font-size: 17px; }
+.resume ul { margin: 0; padding-left: 20px; }
+nav ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 28px; font-size: 15px; }
+@media (max-width: 560px) { nav ol { columns: 1; } }
+nav a { color: var(--vert); text-decoration: none; }
+nav a:hover, nav a:focus-visible { text-decoration: underline; }
+section { display: grid; gap: 10px; scroll-margin-top: 16px; }
+h2 { font: 600 22px/1.3 var(--titre); margin: 8px 0 0; text-wrap: balance; display: flex; gap: 10px; align-items: baseline; }
+h2 .num { color: var(--vert); font-variant-numeric: tabular-nums; }
+p, li { max-width: 68ch; margin: 0; }
+ul { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+a { color: var(--vert); }
+.remplir { background: var(--a-remplir); color: var(--a-remplir-texte); border-radius: 5px; padding: 0 5px; font-weight: 600; }
+.tableau { overflow-x: auto; border: 1px solid var(--trait); border-radius: 12px; background: var(--papier); }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--trait); }
+th { font: 600 12px var(--corps); text-transform: uppercase; letter-spacing: .06em; color: var(--gris); background: var(--fond); }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; }
+.pastille { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 1px 8px; border-radius: 999px; background: var(--vert-clair); color: var(--vert); white-space: nowrap; }
+footer { border-top: 1px solid var(--trait); padding-top: 18px; color: var(--gris); font-size: 14px; }
+</style>
+
+<style>*{box-sizing:border-box} body{margin:0}</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="marque">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z"/></svg>
+    AnimAide
+  </div>
+  <h1>Politique de confidentialité</h1>
+  <p class="meta">Application Android AnimAide (fr.animaide.app) · Dernière mise à jour : 15 novembre 2026</p>
+</header>
+
+<div class="resume">
+  <strong>En bref</strong>
+  <ul>
+    <li>Nous demandons votre adresse e-mail uniquement pour vous connecter. Elle n'est jamais affichée.</li>
+    <li>Vos signalements (texte, photos, lieu) sont <strong>publics</strong> : tous les utilisateurs peuvent les voir.</li>
+    <li>Pas de publicité, pas de revente de données, pas de suivi statistique.</li>
+    <li>Vous pouvez supprimer votre compte et tous vos signalements à tout moment, depuis l'application.</li>
+  </ul>
+</div>
+
+<nav aria-label="Sommaire">
+  <ol>
+    <li><a href="#responsable">Responsable du traitement</a></li>
+    <li><a href="#donnees">Données collectées</a></li>
+    <li><a href="#bases">Pourquoi et sur quelle base</a></li>
+    <li><a href="#prestataires">Prestataires</a></li>
+    <li><a href="#public">Ce qui est public</a></li>
+    <li><a href="#duree">Durée de conservation</a></li>
+    <li><a href="#droits">Vos droits</a></li>
+    <li><a href="#suppression">Supprimer votre compte</a></li>
+    <li><a href="#securite">Sécurité</a></li>
+    <li><a href="#mineurs">Mineurs</a></li>
+    <li><a href="#modifications">Modifications</a></li>
+  </ol>
+</nav>
+
+<section id="responsable">
+  <h2><span class="num">1</span> Responsable du traitement</h2>
+  <p>L'application AnimAide est éditée par ALARD, particulier, domicilié à Sorgues (Vaucluse, France).</p>
+  <p>Pour toute question sur vos données : <strong>animaide.contact@gmail.com</strong></p>
+</section>
+
+<section id="donnees">
+  <h2><span class="num">2</span> Données collectées</h2>
+  <div class="tableau">
+    <table>
+      <thead><tr><th>Donnée</th><th>À quoi elle sert</th><th>Qui la voit</th></tr></thead>
+      <tbody>
+        <tr><td>Adresse e-mail</td><td>Vous envoyer le code de connexion et vous identifier.</td><td><span class="pastille">Privée</span> l'éditeur uniquement</td></tr>
+        <tr><td>Identifiant de compte</td><td>Numéro technique enregistré avec vos signalements pour que vous seul puissiez les modifier ou les supprimer. Il ne contient ni votre nom ni votre e-mail.</td><td>Enregistré avec vos signalements</td></tr>
+        <tr><td>Contenu des signalements</td><td>Type de signalement, animal, titre, description, commune, statut et date.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
+        <tr><td>Position de l'animal</td><td>Le point que vous placez sur la carte lors d'un signalement.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
+        <tr><td>Photos</td><td>Les photos que vous ajoutez à un signalement (réduites avant envoi).</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
+        <tr><td>Position de votre téléphone</td><td>Afficher votre commune, trier les signalements par distance, préremplir le lieu d'un signalement et, si vous les activez, les alertes. La dernière position est gardée <strong>sur votre téléphone uniquement</strong>.</td><td>Non envoyée à nos serveurs</td></tr>
+        <tr><td>Données techniques</td><td>Adresse IP et journaux techniques conservés par nos hébergeurs pour faire fonctionner et sécuriser le service.</td><td>Hébergeurs</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Nous ne collectons ni votre nom, ni votre numéro de téléphone, ni vos contacts. L'application ne contient ni publicité ni outil de mesure d'audience.</p>
+</section>
+
+<section id="bases">
+  <h2><span class="num">3</span> Pourquoi et sur quelle base</h2>
+  <ul>
+    <li><strong>Fournir le service</strong> (compte, signalements, photos) : exécution des conditions d'utilisation que vous acceptez en utilisant l'application (article 6.1.b du RGPD).</li>
+    <li><strong>Localisation et notifications</strong> : votre consentement, donné par les autorisations Android. Vous pouvez le retirer à tout moment dans les réglages du téléphone.</li>
+    <li><strong>Lutter contre les abus</strong> et sécuriser le service : intérêt légitime de l'éditeur (article 6.1.f du RGPD).</li>
+  </ul>
+  <p>Vos données ne sont jamais vendues ni utilisées à des fins publicitaires.</p>
+</section>
+
+<section id="prestataires">
+  <h2><span class="num">4</span> Prestataires</h2>
+  <p>Nous faisons appel aux services suivants, qui traitent certaines données pour notre compte :</p>
+  <ul>
+    <li><strong>Supabase</strong> : hébergement de la base de données, des comptes et des photos. Serveurs situés dans l'Union européenne (Paris).</li>
+    <li><strong>Brevo</strong> (France) : envoi des e-mails de connexion. Reçoit votre adresse e-mail.</li>
+    <li><strong>OpenStreetMap</strong> (OpenStreetMap Foundation, Royaume-Uni) : affichage du fond de carte. Les serveurs de cartes reçoivent l'adresse IP de votre téléphone et la zone affichée. Le Royaume-Uni bénéficie d'une décision d'adéquation de la Commission européenne.</li>
+    <li><strong>Service de géocodage d'Android</strong> (Google) : trouver le nom de la commune à partir d'une position, ou une position à partir d'une commune recherchée. Ce service peut transférer des données aux États-Unis, dans le cadre du Data Privacy Framework UE–États-Unis.</li>
+  </ul>
+</section>
+
+<section id="public">
+  <h2><span class="num">5</span> Ce qui est public</h2>
+  <p>Un signalement sert à alerter les autres utilisateurs et les associations : son contenu (texte, photos, commune et position de l'animal) est visible par tous. Votre adresse e-mail n'y figure jamais.</p>
+  <p>Merci de ne pas publier de photos où l'on reconnaît des personnes, des plaques d'immatriculation ou des numéros de maison, ni de nom ou d'adresse dans la description.</p>
+</section>
+
+<section id="duree">
+  <h2><span class="num">6</span> Durée de conservation</h2>
+  <ul>
+    <li><strong>Compte et adresse e-mail</strong> : tant que votre compte existe.</li>
+    <li><strong>Signalements et photos</strong> : jusqu'à ce que vous les supprimiez, ou jusqu'à la suppression de votre compte.</li>
+    <li><strong>Journaux techniques</strong> des hébergeurs : quelques jours à quelques semaines, selon leurs règles.</li>
+  </ul>
+  <p>L'éditeur peut retirer un signalement manifestement faux, injurieux ou illicite.</p>
+</section>
+
+<section id="droits">
+  <h2><span class="num">7</span> Vos droits</h2>
+  <p>Conformément au RGPD et à la loi Informatique et Libertés, vous pouvez demander l'accès à vos données, leur rectification, leur effacement, leur portabilité, la limitation du traitement, ou vous y opposer. Écrivez à <strong>animaide.contact@gmail.com</strong> ; nous répondons sous un mois.</p>
+  <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL : <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">www.cnil.fr/fr/plaintes</a>.</p>
+</section>
+
+<section id="suppression">
+  <h2><span class="num">8</span> Supprimer votre compte</h2>
+  <p><strong>Dans l'application</strong> : onglet <em>Plus</em>, puis <em>Mon compte</em>, puis <em>Supprimer mon compte</em>. Votre compte, tous vos signalements et leurs photos sont supprimés immédiatement et définitivement.</p>
+  <p><strong>Sans l'application</strong> : envoyez un e-mail à <strong>animaide.contact@gmail.com</strong> depuis l'adresse de votre compte, avec pour objet « Suppression de compte ». La suppression est effectuée sous 30 jours.</p>
+</section>
+
+<section id="securite">
+  <h2><span class="num">9</span> Sécurité</h2>
+  <p>Les échanges entre l'application et nos serveurs sont chiffrés (HTTPS). Il n'y a pas de mot de passe : la connexion se fait par un code à usage unique envoyé par e-mail. Des règles d'accès empêchent quiconque de modifier ou supprimer les signalements d'un autre utilisateur.</p>
+</section>
+
+<section id="mineurs">
+  <h2><span class="num">10</span> Mineurs</h2>
+  <p>En France, un mineur de moins de 15 ans ne peut créer un compte qu'avec l'accord d'un parent ou d'un tuteur légal.</p>
+</section>
+
+<section id="modifications">
+  <h2><span class="num">11</span> Modifications</h2>
+  <p>Cette politique peut évoluer avec l'application. La date de mise à jour figure en haut de la page. En cas de changement important, vous en serez informé dans l'application.</p>
+</section>
+
+<footer>AnimAide · Ensemble pour les animaux · Contact : animaide.contact@gmail.com</footer>
+</div>
+</body>
+</html>
