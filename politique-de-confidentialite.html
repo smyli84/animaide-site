@@ -70,7 +70,7 @@ footer { border-top: 1px solid var(--trait); padding-top: 18px; color: var(--gri
     AnimAide
   </div>
   <h1>Politique de confidentialité</h1>
-  <p class="meta">Application Android AnimAide (fr.animaide.app) · Dernière mise à jour : 20 novembre 2026</p>
+  <p class="meta">Application Android AnimAide (fr.animaide.app) · Dernière mise à jour : 24 novembre 2026</p>
 </header>
 
 <div class="resume">
@@ -116,7 +116,7 @@ footer { border-top: 1px solid var(--trait); padding-top: 18px; color: var(--gri
         <tr><td>Contenu des signalements</td><td>Type de signalement, animal, titre, description, commune, statut et date.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
         <tr><td>Coordonnées sur un signalement</td><td>Le téléphone et/ou l'e-mail que <strong>vous choisissez</strong> d'indiquer (facultatif) pour être contacté, par exemple par le propriétaire d'un animal trouvé. Rien n'est envoyé si vous signalez anonymement.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
         <tr><td>Position de l'animal</td><td>Le point que vous placez sur la carte lors d'un signalement.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
-        <tr><td>Photos</td><td>Les photos que vous ajoutez à un signalement (réduites avant envoi).</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
+        <tr><td>Photos</td><td>Les photos que vous ajoutez à un signalement (réduites avant envoi). Au moment de l'ajout, la photo est analysée automatiquement pour vérifier qu'elle est nette et montre bien l'animal (voir « Prestataires ») ; ce n'est qu'un conseil, la photo n'est jamais refusée.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
         <tr><td>Annonces de dons</td><td>Ce que vous donnez ou cherchez (titre, description, catégorie, commune) et les coordonnées de contact que <strong>vous choisissez</strong> d'indiquer : téléphone et/ou e-mail.</td><td><span class="pastille">Public</span> tous les utilisateurs</td></tr>
         <tr><td>« Je l'ai vu aussi » / « Je m'en occupe »</td><td>Votre indication sur un signalement, enregistrée avec votre identifiant de compte.</td><td>Seul le nombre total est affiché</td></tr>
         <tr><td>Signalements de contenus inappropriés</td><td>Le contenu signalé, le motif, vos précisions éventuelles et votre identifiant de compte si vous êtes connecté, pour permettre la modération.</td><td><span class="pastille">Privée</span> l'éditeur uniquement</td></tr>
@@ -145,6 +145,7 @@ footer { border-top: 1px solid var(--trait); padding-top: 18px; color: var(--gri
   <ul>
     <li><strong>Supabase</strong> : hébergement de la base de données, des comptes et des photos. Serveurs situés dans l'Union européenne (Paris).</li>
     <li><strong>Brevo</strong> (France) : envoi des e-mails de connexion. Reçoit votre adresse e-mail.</li>
+    <li><strong>Anthropic</strong> (Anthropic PBC, États-Unis) : analyse automatique de la qualité des photos de signalement par son intelligence artificielle (Claude). Seule la photo est transmise, sans votre nom ni votre adresse e-mail ; Anthropic la traite pour notre compte et ne l'utilise pas pour entraîner ses modèles. Le transfert hors de l'Union européenne est encadré par les garanties prévues par le RGPD (clauses contractuelles types).</li>
     <li><strong>OpenStreetMap</strong> (OpenStreetMap Foundation, Royaume-Uni) : affichage du fond de carte. Les serveurs de cartes reçoivent l'adresse IP de votre téléphone et la zone affichée. Le Royaume-Uni bénéficie d'une décision d'adéquation de la Commission européenne.</li>
     <li><strong>Service de géocodage d'Android</strong> (Google) : trouver le nom de la commune à partir d'une position, ou une position à partir d'une commune recherchée. Ce service peut transférer des données aux États-Unis, dans le cadre du Data Privacy Framework UE–États-Unis.</li>
   </ul>
