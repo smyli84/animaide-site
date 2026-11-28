@@ -4,9 +4,122 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AnimAide</title>
-<meta http-equiv="refresh" content="0; url=politique-de-confidentialite.html">
+<meta name="description" content="AnimAide : l'application gratuite et sans publicité pour signaler et aider les animaux perdus, trouvés ou en détresse près de chez vous.">
+<link rel="icon" href="logo-animaide-128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --fond: #F6F8F6; --papier: #FFFFFF; --texte: #1B1F1C; --gris: #5D6660; --trait: #DDE4DF;
+  --vert: #1E6B3A; --vert-clair: #E5F2E8; --sur-vert: #FFFFFF; --ambre-clair: #FFF4DC; --ambre: #8A5A00;
+  --titre: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --corps: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --fond: #121614; --papier: #1A201C; --texte: #E6ECE8; --gris: #A3AFA7; --trait: #2C3530;
+  --vert: #6FCB8E; --vert-clair: #203328; --sur-vert: #10241A; --ambre-clair: #33290F; --ambre: #F2C46B; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --fond: #121614; --papier: #1A201C; --texte: #E6ECE8; --gris: #A3AFA7; --trait: #2C3530;
+  --vert: #6FCB8E; --vert-clair: #203328; --sur-vert: #10241A; --ambre-clair: #33290F; --ambre: #F2C46B; color-scheme: dark }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--fond); color: var(--texte); font: 400 16px/1.6 var(--corps); }
+.page { max-width: 960px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-left, 0px)) 64px; display: grid; gap: 56px; }
+a { color: var(--vert); }
+.marque { display: flex; align-items: center; gap: 10px; font: 700 20px var(--titre); color: var(--vert); }
+.marque img { width: 36px; height: 36px; border-radius: 9px; }
+.hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
+@media (max-width: 720px) { .hero { grid-template-columns: 1fr; } }
+h1 { font: 700 clamp(32px, 6vw, 48px)/1.1 var(--titre); margin: 12px 0 14px; text-wrap: balance; }
+.accroche { font-size: 18px; color: var(--gris); max-width: 52ch; margin: 0 0 24px; }
+.boutons { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 14px; font: 600 16px var(--corps); text-decoration: none; }
+.btn-plein { background: var(--vert); color: var(--sur-vert); }
+.btn-contour { border: 1.5px solid var(--vert); color: var(--vert); }
+.btn:focus-visible { outline: 3px solid var(--vert); outline-offset: 3px; }
+.qr { background: var(--papier); border: 1px solid var(--trait); border-radius: 20px; padding: 20px; text-align: center; justify-self: center; max-width: 300px; }
+.qr img { width: 100%; max-width: 240px; height: auto; display: block; margin: 0 auto 8px; background: #fff; border-radius: 10px; }
+.qr p { margin: 0; color: var(--gris); font-size: 14px; }
+h2 { font: 700 clamp(24px, 4vw, 30px)/1.2 var(--titre); margin: 0 0 18px; text-wrap: balance; }
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.carte { background: var(--papier); border: 1px solid var(--trait); border-radius: 16px; padding: 18px; }
+.carte h3 { font: 600 17px/1.3 var(--titre); margin: 0 0 6px; }
+.carte p { margin: 0; color: var(--gris); font-size: 15px; }
+.emoji { font-size: 26px; display: block; margin-bottom: 6px; }
+.assos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.asso { display: flex; gap: 14px; align-items: center; background: var(--papier); border: 1px solid var(--trait); border-radius: 16px; padding: 14px; }
+.asso img { width: 64px; height: 64px; border-radius: 14px; object-fit: contain; background: #fff; flex: none; }
+.asso strong { font-family: var(--titre); font-size: 17px; display: block; }
+.asso span { color: var(--gris); font-size: 14px; }
+.soutien { background: var(--ambre-clair); border-radius: 22px; padding: 28px; display: grid; gap: 14px; }
+.soutien h2 { margin: 0; }
+.soutien p { margin: 0; max-width: 64ch; }
+.soutien ul { margin: 0; padding-left: 20px; }
+.note { font-size: 14px; color: var(--gris); }
+footer { border-top: 1px solid var(--trait); padding-top: 20px; color: var(--gris); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
 </head>
 <body>
-<p><a href="politique-de-confidentialite.html">Politique de confidentialité d'AnimAide</a></p>
+<div class="page">
+
+<header class="hero">
+  <div>
+    <div class="marque"><img src="logo-animaide-128.png" alt="">AnimAide</div>
+    <h1>Un animal perdu, trouvé ou en détresse&nbsp;?</h1>
+    <p class="accroche">Signalez-le en quelques secondes et prévenez les personnes et les associations autour de vous. Gratuite, sans publicité, faite pour les animaux.</p>
+    <div class="boutons">
+      <a class="btn btn-plein" href="https://play.google.com/store/apps/details?id=fr.animaide.app">📲 Télécharger sur Google Play</a>
+      <a class="btn btn-contour" href="#soutenir">💚 Soutenir AnimAide</a>
+    </div>
+  </div>
+  <div class="qr">
+    <img src="qr-animaide.png" alt="QR code vers AnimAide sur Google Play" width="240" height="240">
+    <p>Scannez pour télécharger · Android</p>
+  </div>
+</header>
+
+<section>
+  <h2>Ce que fait AnimAide</h2>
+  <div class="grille">
+    <div class="carte"><span class="emoji">📍</span><h3>Signaler en un instant</h3><p>Animal perdu, trouvé, blessé, abandonné ou maltraité : photo, position sur la carte, et c'est publié.</p></div>
+    <div class="carte"><span class="emoji">🔔</span><h3>Alertes près de chez vous</h3><p>Soyez prévenu d'un nouveau signalement dans le rayon que vous choisissez.</p></div>
+    <div class="carte"><span class="emoji">🔎</span><h3>Perdu ↔ trouvé</h3><p>L'appli rapproche automatiquement les animaux perdus et trouvés qui se ressemblent.</p></div>
+    <div class="carte"><span class="emoji">💬</span><h3>Discussion en direct</h3><p>Sous chaque annonce, donnez des nouvelles : « Je l'ai vu près de l'école ».</p></div>
+    <div class="carte"><span class="emoji">🤝</span><h3>Je peux aider</h3><p>Proposez un transport, un accueil temporaire ou du matériel.</p></div>
+    <div class="carte"><span class="emoji">🎁</span><h3>Dons solidaires</h3><p>Donnez ou trouvez nourriture, couvertures et matériel près de chez vous.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Associations partenaires</h2>
+  <div class="assos">
+    <div class="asso"><img src="associations/les-patounes-de-vavou.jpg" alt=""><div><strong>Les Patounes de Vavou</strong><span>Barbentane (13)</span></div></div>
+    <div class="asso"><img src="associations/pattounes-de-saze.jpg" alt=""><div><strong>Pattounes de Saze</strong><span>Saze (30)</span></div></div>
+  </div>
+  <p class="note">Vous êtes une association de protection animale ? Faites votre demande dans l'appli : Plus → Associations partenaires.</p>
+</section>
+
+<section class="soutien" id="soutenir">
+  <h2>💚 Soutenir AnimAide</h2>
+  <p>AnimAide est développée de façon indépendante et restera <strong>gratuite et sans publicité</strong>. Votre soutien aide à couvrir les frais :</p>
+  <ul>
+    <li>l'hébergement des annonces et des photos,</li>
+    <li>l'aide intelligente (analyse des photos, assistant « Que faire ? »),</li>
+    <li>la future version iPhone.</li>
+  </ul>
+  <div class="boutons" id="cagnotte">
+    <!-- CAGNOTTE : remplacer ce bloc par le lien de la cagnotte -->
+    <span class="btn btn-contour" style="border-style:dashed;opacity:.8" aria-disabled="true">🐾 Cagnotte bientôt en ligne</span>
+  </div>
+  <p class="note">Vous pouvez aussi nous aider gratuitement : laissez un avis ⭐ sur Google Play et partagez l'appli autour de vous.</p>
+</section>
+
+<footer>
+  <span>© 2026 AnimAide</span>
+  <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+  <a href="mailto:animaide.contact@gmail.com">animaide.contact@gmail.com</a>
+</footer>
+
+</div>
 </body>
 </html>
